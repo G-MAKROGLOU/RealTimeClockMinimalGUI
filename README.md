@@ -1,2 +1,3 @@
 # RealTimeClockMinimalGUI
 A simple Java Clock application with the minimal GUI needed to run. 
+The time is split into three components, hours, minutes, seconds. For every component, a different class that implements Runnable is created in order for the processes of each component to run separately. Every component class is creating in its' constructor a JLabel in which it sets the text for the corresponding time component through the implementation of run(). In the main method, a new JFrame is created with all the configurations needed, and then an instance of each component class is created and it is passed as parameter to the corresponding Thread constructor. Finally, the three JLabels are added to the panel and all the Threads start.
